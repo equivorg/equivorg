@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Equiv</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <link href="//twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="//twitter.github.com/bootstrap/assets/css/docs.css" rel="stylesheet">
+  <link href="//twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

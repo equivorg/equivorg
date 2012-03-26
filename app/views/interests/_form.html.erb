@@ -1,0 +1,22 @@
+<%= simple_form_for(@interest, :html => {:class => 'form-vertical well' }) do |f| %>
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert" href="#">&times;</a>
+      <%= f.error_notification %>
+      <ul>
+      <% @interest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.input :name, :input_html => { :class => "span5" }, :placeholder => "So we don't have to refer to you as \"hey you\"..." %>
+    <%= f.input :email, :input_html => { :class => "span5" }, :placeholder => "We want to let you know when its ready..." %>
+    <%= f.input :degree, :input_html => { :class => "span5" }, :placeholder => "Curious: what degree would you want..." %>
+    <%= f.input :notes, :input_html => {:class => "span5", :rows=>'5'}, :placeholder => "Tell us all about you..." %>
+
+    <%= f.submit :class => "btn btn-warning" %>
+
+
+<% end %>
