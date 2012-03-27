@@ -1,14 +1,14 @@
 <div class="container">
 	<div class="row" style="margin-bottom: 36px;">
 		<div class="span6 offset2">
-			<h1 style="font-size: 72px; letter-spacing: -1px; line-height: 1; text-rendering: optimizelegibiliy;">equiv.org</h1>
+			<h1 style="font-size: 72px; letter-spacing: -1px; line-height: 1; text-rendering: optimizelegibiliy;" class="tk-museo">equiv.org</h1>
 			<p class="lead">Congratulations, you have found a brand-new web application with a very big idea.  <strong>If you like what we are doing, here is how you could help.</strong></p>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="span6 offset2">
-			<h2>1. Tell us you are interested!</h2>
+			<h2 class="tk-museo">1. Tell us you are interested!</h2>
 			<small>The more we know people are interested, the faster we work</small> 
 			<% if @thanks %>
 				<div class="alert alert-success">Thanks for the feedback!  We will let you know when things are ready!</div>
@@ -20,7 +20,7 @@
 
 	<div class="row">
 		<div class="span6 offset2">
-			<h2>2. Talk it up!</h2>
+			<h2 class="tk-museo">2. Talk it up!</h2>
 			<p>Let other people know about our goal through your social network.</p>
 			<p>
 				<%= 	content_tag :iframe, nil, :src => "http://www.facebook.com/plugins/like.php?href=#{CGI::escape('http://www.equiv.org')}&layout=standard&show_faces=true&width=450&action=like&font=arial&colorscheme=light&height=80", :scrolling => 'no', :frameborder => '0', :allowtransparency => true, :id => :facebook_like, :height=>30 %>
@@ -31,7 +31,7 @@
 
 	<div class="row">
 		<div class="span6 offset2">
-			<h2>2. Fork me! <small>(Are you geek enough?)</small></h2>
+			<h2 class="tk-museo">2. Fork me! <small>(Are you geek enough?)</small></h2>
 			<p>We are trying to help anyone receive a higher-level of education for free.  Expecting to profit off of education just doesn't seem right.  We are open sourcing the code as a result.</p>
 		</div>
 	</div>
