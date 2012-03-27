@@ -37,3 +37,12 @@ Degree.create([{:name =>'Arts',:slug=>'arts'},
 	{:name=>'Law',:slug=>'law'},
 	{:name=>'Mathematics',:slug=>'mathematics'},
 	{:name=>'Other',:slug=>'other'}])
+
+degree = Degree.where(:slug=>'computer-science').first
+school = School.create({:name=>'School of Engineering', :slug =>'school-of-engineering'})
+school.degrees << degree
+
+curriculum = Curriculum.create(:name=>'Basic')
+degree.curriculums << curriculum
+course = Course.create(:name=>'Programming Abstractions')
+requirement = Requirement.create(:curriculum=>curriculum,:course=>course)
