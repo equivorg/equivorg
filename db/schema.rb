@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120324153113) do
+ActiveRecord::Schema.define(:version => 20120327140541) do
+
+  create_table "degrees", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "interests", :force => true do |t|
     t.string   "name"

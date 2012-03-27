@@ -4,6 +4,8 @@ class InterestsController < ApplicationController
   # GET /interests/new.json
   def new
     @interest = Interest.new
+    @degrees = Degree.find(:all, :order=>'name')
+
 
     respond_to do |format|
       format.html # new.html.erb
@@ -15,6 +17,7 @@ class InterestsController < ApplicationController
   # POST /interests.json
   def create
     @interest = Interest.new(params[:interest])
+    @degrees = Degree.find(:all, :order=>'name')
 
     respond_to do |format|
       if @interest.save
